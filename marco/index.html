@@ -1,0 +1,189 @@
+<html>
+
+<head>
+    <title>Word Clock Enhanced Configurator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div class="topnav">
+        <h1>Word Clock Enhanced Configurator</h1>
+    </div>
+    <div class="content">
+        <div class="card-grid">
+            <div class="card">
+                <p class="card-title">Configuration</p>
+                <div class="switch">
+                    <button onclick="colorModeDropdown()" class="dropbtn" id="ledMode">Led Mode</button>
+                    <div id="colorDropdownMenu" class="dropdown-content">
+                        <input type="button" onclick="updateColorMode(this)" id="dropdown1" value="One Color"
+                            class="dropdown">
+                        <input type="button" onclick="updateColorMode(this)" id="dropdown2" value="Rainbow Pixel"
+                            class="dropdown">
+                        <input type="button" onclick="updateColorMode(this)" id="dropdown3" value="Rainbow Word"
+                            class="dropdown">
+                    </div>
+                </div>
+                <p></p>
+                <div class="switch">
+                    <button onclick="functionDropdown()" class="dropbtn" id="functionMode">Function</button>
+                    <div id="functionDropdownMenu" class="dropdown-content">
+                        <input type="button" onclick="updateFunction(this)" id="fdropdown1" value="Word Clock"
+                            class="dropdown">
+                        <input type="button" onclick="updateFunction(this)" id="fdropdown2" value="Fill Color"
+                            class="dropdown">
+                        <input type="button" onclick="updateFunction(this)" id="fdropdown3" value="Rain"
+                            class="dropdown">
+                    </div>
+                </div>
+                <hr width="90%">
+                </p>
+                <p class="card-subtitle">Brightness
+                    <label id="sliderValue1"></label>
+                </p>
+
+                <p class="switch">
+                    <input type="range" onchange="updateSlider(this)" id="slider1" min="0" max="100" step="1" value="0"
+                        class="slider">
+                </p>
+                <hr width="90%">
+                <div id="colorCard" }>
+                    <p class="card-subtitle">General Color
+                        <label id="colorValue1"></label>
+                    </p>
+                    <p class="switch">
+                        <input type="color" onchange="updateColor(this)" id="color1" value="#FFFFFF">
+                    </p>
+                    <hr width="90%">
+                </div>
+                <p class="card-subtitle">Transition Color
+                    <label id="colorValue3"></label>
+                </p>
+                <p class="switch">
+                    <input type="color" onchange="updateColor(this)" id="color3" value="#FFFFFF">
+                </p>
+                <hr width="90%">
+                <div>
+                    <p class="card-subtitle">Advanced Configuration</p>
+                    <label class="toggleSwitch">
+                        <input type="checkbox" onclick="updateToggleAdvancedConfiguration(this)" id="toggleCfg"
+                            unchecked>
+                        <span class="toggle round"></span>
+                    </label>
+                </div>
+                <p></p>
+            </div>
+            <div class="card" id="configurationCard" style.display="none">
+                <p class="card-title"> Advanced Configuration</p>
+                <p class="card-subtitle">Auto Brightness Correction
+                    <label id="sliderValue4"></label>
+                </p>
+                <p class="switch">
+                    <input type="range" id="slider4" onchange="updateSlider(this)" min="-10" max="10" step="1" value="0"
+                        class="slider">
+                </p>
+                <hr width="90%">
+                <p class="card-subtitle">Calender event start
+                    <label id="sliderValue3"></label>
+                </p>
+                <p class="switch">
+                    <input type="range" id="slider3" onchange="updateSlider(this)" min="-1" max="23" step="1" value="18"
+                        class="slider">
+                </p>
+                <p></p>
+            </div>
+            <div class="card">
+                <p class="card-title">Alarm</p>
+                <div>
+                    <p class="card-subtitle">Enable/Disable</p>
+                    <label class="toggleSwitch">
+                        <input type="checkbox" onclick="updateToggleAlarm(this)" id="toggleAlarm" checked>
+                        <span class="toggle round"></span>
+                    </label>
+                </div>
+                <div id="alarmCard">
+                    <div class="switch">
+                        <div>
+                            <hr width="90%">
+                            <div>
+                                <p class="card-subtitle">Alarm Event Configuration</p>
+                            </div>
+                            <div>
+                                <input type="time" id="timePicker" step="300"> &nbsp
+                                <select id="alarmList">
+                                    <option id="Beer" value="0">Beer</option>
+                                    <option id="Whisky" value="1">Whisky</option>
+                                    <option id="Bed" value="2">Bed</option>
+                                    <option id="Sex" value="3">Sex</option>
+                                    <option id="Schnaps" value="4">Schnaps</option>
+                                    <option id="Wine" value="5">Wine</option>
+                                </select>
+                                <label id="labelTime"></label>
+                            </div>
+                            <p></p>
+                            <div>
+                                <input type="button" onclick="setAlarm(this)" id="alarmButton" value="Set Alarm"
+                                    class="button">
+                                <p></p>
+                                <hr width="90%">
+                                <div>
+                                    <p class="card-subtitle">Alarm Event Overview</p>
+                                </div>
+                                <select name="alarmListbox" id="alarmListbox" multiple size="10">
+                                </select>
+                                <p></p>
+                                <input type="button" onclick="deleteAlarm(this)" id="alarmDeleteButton"
+                                    value="Delete Alarm" class="button">
+                            </div>
+                            <hr width="90%">
+                            <div>
+                                <form id="colorCard2" }>
+                                    <p class="card-subtitle">Alarm Color
+                                        <label id="alarmColorValue"></label>
+                                    </p>
+                                    <p class="switch">
+                                        <input type="color" onchange="updateColor(this)" id="color2" value="#FFFFFF">
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+            </div>
+            <div class="card">
+                <p class="card-title"> Calender </p>
+                <div class="switch">
+                    <input type="file" id="readfile" onchange="readFile(this)" style="display: none" accept=".ics"
+                        multiple="multiple">
+                    <input type="button" value="Set Calender Data" onclick="document.getElementById('readfile').click()"
+                        class="button">
+                    <p></p>
+                    <input type="button" value="Delete Calender Data" onclick="deleteICS(this)" class="button">
+                </div>
+                <hr width="90%">
+                <p class="card-title"> Store & Load </p>
+                <div class="switch">
+                    <input type="button" onclick="updateButton(this)" id="button1" value="Load Default Configuration"
+                        class="button">
+                </div>
+                <p></p>
+                <div class="switch">
+                    <input type="button" onclick="updateButton(this)" id="button2"
+                        value="Store As Default Configuration" class="button">
+                </div>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div class=" card">
+        <div class="bottomNav">
+            <h3><label id="informationLabel"></label></h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

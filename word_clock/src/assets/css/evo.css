@@ -1,0 +1,17 @@
+:root {
+  --color-lightgrey: #B2BBBE;  /* background color for fas frontend */
+  --color-grey: #3a3a3a; /* background color for fas frontend navbar*/
+  --color-orange: #EA681F;
+  --color-blue: #1D61A1;
+}
+
+@font-face {
+  font-family: 'EvoFontRegular';
+  src: url('relative_path_to/BarlowCondensed-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'EvoFontBold';
+  src: url('relative_path_to/Barlow_Condensed/BarlowCondensed-Bold.ttf');
+}
+/* font size varies */

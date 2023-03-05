@@ -1,0 +1,25 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 1.5rem;
+  height: 2rem;
+  width: 100%;
+  font-family: 'Barlow Condensed 700';
+  background-image: linear-gradient(180deg, #434342 0%, #2E2E2E 100%);
+  text-align: right;
+}
+
+#frontend {
+  display: flex;
+  justify-content: right; /*might need changing when adding more content to footer*/
+  align-items: center;
+  height: inherit;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+}
+#frontend p {
+margin-bottom: 0%;
+color: var(--color-orange);
+height: fit-content;
+}
