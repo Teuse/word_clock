@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./Configuration.css";
 
 export default function ColorConfig() {
+  const [clockColor, setClockColor] = useState("#FFFFFF");
+  const [transitionColor, setTransitionColor] = useState("#FFFFFF");
   const [brightnes, setBrightnes] = useState(20);
 
   return (
@@ -11,9 +13,9 @@ export default function ColorConfig() {
         <span class="color">
           <input
             type="color"
-            onChange="updateColor(this)"
+            onChange={(event) => setClockColor(event.target.value)}
             id="color1"
-            value="#FFFFFF"
+            value={clockColor}
           />
         </span>
       </div>
@@ -23,24 +25,24 @@ export default function ColorConfig() {
         <span class="color">
           <input
             type="color"
-            onChange="updateColor(this)"
+            onChange={(event) => setTransitionColor(event.target.value)}
             id="color1"
-            value="#FFFFFF"
+            value={transitionColor}
           />
         </span>
       </div>
       <hr class="separator" />
       <div class="box-entry">
-        Brightness <div class="box-value">20%</div>
+        Brightness <div class="box-value">{brightnes}%</div>
       </div>
       <input
         type="range"
-        onChange={setBrightnes}
+        onChange={(event) => setBrightnes(event.target.value)}
         id="slider1"
         min="0"
         max="100"
         step="1"
-        value={brightnes}
+        // value={brightnes}
         class="slider"
       />
     </div>
