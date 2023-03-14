@@ -1,25 +1,38 @@
 footer {
   position: absolute;
-  bottom: 0;
+  /* bottom: 0; */
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  /* margin-top: -50px; */
+  background-color: rgb(50, 50, 50);
+}
+
+.footer-text {
+  color:rgb(200, 200, 200)
+}
+
+/* footer {
+  
   font-size: 1.5rem;
   height: 2rem;
   width: 100%;
   font-family: 'Barlow Condensed 700';
   background-image: linear-gradient(180deg, #434342 0%, #2E2E2E 100%);
   text-align: right;
-}
+} */
 
-#frontend {
+/* #frontend {
   display: flex;
-  justify-content: right; /*might need changing when adding more content to footer*/
+  justify-content: right; 
   align-items: center;
   height: inherit;
   margin: 0 auto;
   width: 90%;
   max-width: 1200px;
-}
-#frontend p {
+} */
+/* #frontend p {
 margin-bottom: 0%;
 color: var(--color-orange);
 height: fit-content;
-}
+} */

@@ -18,6 +18,9 @@ export default (_props) => {
       <a className="menu-item" href="/settings">
         Settings
       </a>
+      <a className="menu-item" href="/wordclock">
+        Word Clock
+      </a>
     </Menu>
   );
 };

@@ -3,37 +3,39 @@ import "./Settings.css";
 
 export default function Settings() {
   return (
-    <settings>
-      <p class="card-title"> Calender </p>
+    <app-box class="settings">
+      <h1>Settings</h1>
+      <h3>Calender</h3>
       <div class="switch">
         <input
           type="file"
           id="readfile"
-          onchange="readFile(this)"
+          onChange="readFile(this)"
           // style="display:none"
           accept=".ics"
           multiple="multiple"
         />
+        <br /><br />
         <input
           type="button"
           value="Set Calender Data"
-          onclick="document.getElementById('readfile').click()"
+          onClick="document.getElementById('readfile').click()"
           class="button"
         />
         <p></p>
         <input
           type="button"
           value="Delete Calender Data"
-          onclick="deleteICS(this)"
+          onClick="deleteICS(this)"
           class="button"
         />
       </div>
       <hr width="90%" />
-      <p class="card-title"> Store & Load </p>
+      <h3>Store & Load</h3>
       <div class="switch">
         <input
           type="button"
-          onclick="updateButton(this)"
+          onClick="updateButton(this)"
           id="button1"
           value="Load Default Configuration"
           class="button"
@@ -43,13 +45,13 @@ export default function Settings() {
       <div class="switch">
         <input
           type="button"
-          onclick="updateButton(this)"
+          onClick="updateButton(this)"
           id="button2"
           value="Store As Default Configuration"
           class="button"
         />
       </div>
       <p></p>
-    </settings>
+    </app-box>
   );
 }

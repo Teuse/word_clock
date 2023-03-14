@@ -3,14 +3,14 @@ import './Alarm.css';
 
 export default function Alarm() {
   return (
-    <alarm>
-      <p class="card-title">Alarm</p>
+    <app-box class="alarm">
+      <h1>Alarm</h1>
       <div>
-        <p class="card-subtitle">Enable/Disable</p>
+        <h3>Enable/Disable</h3>
         <label class="toggleSwitch">
           <input
             type="checkbox"
-            onclick="updateToggleAlarm(this)"
+            onClick="updateToggleAlarm(this)"
             id="toggleAlarm"
             checked
           />
@@ -22,10 +22,10 @@ export default function Alarm() {
           <div>
             <hr width="90%" />
             <div>
-              <p class="card-subtitle">Alarm Event Configuration</p>
+              <h3>Alarm Event Configuration</h3>
             </div>
             <div>
-              <input type="time" id="timePicker" step="300" /> &nbsp
+              <input type="time" id="timePicker" step="300" style={{marginRight: 30}} /> 
               <select id="alarmList">
                 <option id="Beer" value="0">
                   Beer
@@ -52,7 +52,7 @@ export default function Alarm() {
             <div>
               <input
                 type="button"
-                onclick="setAlarm(this)"
+                // onClick="setAlarm(this)"
                 id="alarmButton"
                 value="Set Alarm"
                 class="button"
@@ -60,7 +60,7 @@ export default function Alarm() {
               <p></p>
               <hr width="90%" />
               <div>
-                <p class="card-subtitle">Alarm Event Overview</p>
+                <h3>Alarm Event Overview</h3>
               </div>
               <select
                 name="alarmListbox"
@@ -72,7 +72,7 @@ export default function Alarm() {
               <p></p>
               <input
                 type="button"
-                onclick="deleteAlarm(this)"
+                // onClick="deleteAlarm(this)"
                 id="alarmDeleteButton"
                 value="Delete Alarm"
                 class="button"
@@ -81,14 +81,11 @@ export default function Alarm() {
             <hr width="90%" />
             <div>
               <form id="colorCard2">
-                <p class="card-subtitle">
-                  Alarm Color
-                  <label id="alarmColorValue" />
-                </p>
+                <h3>Alarm Color<label id="alarmColorValue" /></h3>
                 <p class="switch">
                   <input
                     type="color"
-                    onchange="updateColor(this)"
+                    // onChange="updateColor(this)"
                     id="color2"
                     value="#FFFFFF"
                   />
@@ -99,6 +96,6 @@ export default function Alarm() {
         </div>
       </div>
       <p></p>
-    </alarm>
+    </app-box>
   );
 }

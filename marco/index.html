@@ -16,25 +16,25 @@
             <div class="card">
                 <p class="card-title">Configuration</p>
                 <div class="switch">
-                    <button onclick="colorModeDropdown()" class="dropbtn" id="ledMode">Led Mode</button>
+                    <button onClick="colorModeDropdown()" class="dropbtn" id="ledMode">Led Mode</button>
                     <div id="colorDropdownMenu" class="dropdown-content">
-                        <input type="button" onclick="updateColorMode(this)" id="dropdown1" value="One Color"
+                        <input type="button" onClick="updateColorMode(this)" id="dropdown1" value="One Color"
                             class="dropdown">
-                        <input type="button" onclick="updateColorMode(this)" id="dropdown2" value="Rainbow Pixel"
+                        <input type="button" onClick="updateColorMode(this)" id="dropdown2" value="Rainbow Pixel"
                             class="dropdown">
-                        <input type="button" onclick="updateColorMode(this)" id="dropdown3" value="Rainbow Word"
+                        <input type="button" onClick="updateColorMode(this)" id="dropdown3" value="Rainbow Word"
                             class="dropdown">
                     </div>
                 </div>
                 <p></p>
                 <div class="switch">
-                    <button onclick="functionDropdown()" class="dropbtn" id="functionMode">Function</button>
+                    <button onClick="functionDropdown()" class="dropbtn" id="functionMode">Function</button>
                     <div id="functionDropdownMenu" class="dropdown-content">
-                        <input type="button" onclick="updateFunction(this)" id="fdropdown1" value="Word Clock"
+                        <input type="button" onClick="updateFunction(this)" id="fdropdown1" value="Word Clock"
                             class="dropdown">
-                        <input type="button" onclick="updateFunction(this)" id="fdropdown2" value="Fill Color"
+                        <input type="button" onClick="updateFunction(this)" id="fdropdown2" value="Fill Color"
                             class="dropdown">
-                        <input type="button" onclick="updateFunction(this)" id="fdropdown3" value="Rain"
+                        <input type="button" onClick="updateFunction(this)" id="fdropdown3" value="Rain"
                             class="dropdown">
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                 </p>
 
                 <p class="switch">
-                    <input type="range" onchange="updateSlider(this)" id="slider1" min="0" max="100" step="1" value="0"
+                    <input type="range" onChange="updateSlider(this)" id="slider1" min="0" max="100" step="1" value="0"
                         class="slider">
                 </p>
                 <hr width="90%">
@@ -54,7 +54,7 @@
                         <label id="colorValue1"></label>
                     </p>
                     <p class="switch">
-                        <input type="color" onchange="updateColor(this)" id="color1" value="#FFFFFF">
+                        <input type="color" onChange="updateColor(this)" id="color1" value="#FFFFFF">
                     </p>
                     <hr width="90%">
                 </div>
@@ -62,13 +62,13 @@
                     <label id="colorValue3"></label>
                 </p>
                 <p class="switch">
-                    <input type="color" onchange="updateColor(this)" id="color3" value="#FFFFFF">
+                    <input type="color" onChange="updateColor(this)" id="color3" value="#FFFFFF">
                 </p>
                 <hr width="90%">
                 <div>
                     <p class="card-subtitle">Advanced Configuration</p>
                     <label class="toggleSwitch">
-                        <input type="checkbox" onclick="updateToggleAdvancedConfiguration(this)" id="toggleCfg"
+                        <input type="checkbox" onClick="updateToggleAdvancedConfiguration(this)" id="toggleCfg"
                             unchecked>
                         <span class="toggle round"></span>
                     </label>
@@ -81,7 +81,7 @@
                     <label id="sliderValue4"></label>
                 </p>
                 <p class="switch">
-                    <input type="range" id="slider4" onchange="updateSlider(this)" min="-10" max="10" step="1" value="0"
+                    <input type="range" id="slider4" onChange="updateSlider(this)" min="-10" max="10" step="1" value="0"
                         class="slider">
                 </p>
                 <hr width="90%">
@@ -89,7 +89,7 @@
                     <label id="sliderValue3"></label>
                 </p>
                 <p class="switch">
-                    <input type="range" id="slider3" onchange="updateSlider(this)" min="-1" max="23" step="1" value="18"
+                    <input type="range" id="slider3" onChange="updateSlider(this)" min="-1" max="23" step="1" value="18"
                         class="slider">
                 </p>
                 <p></p>
@@ -99,7 +99,7 @@
                 <div>
                     <p class="card-subtitle">Enable/Disable</p>
                     <label class="toggleSwitch">
-                        <input type="checkbox" onclick="updateToggleAlarm(this)" id="toggleAlarm" checked>
+                        <input type="checkbox" onClick="updateToggleAlarm(this)" id="toggleAlarm" checked>
                         <span class="toggle round"></span>
                     </label>
                 </div>
@@ -124,7 +124,7 @@
                             </div>
                             <p></p>
                             <div>
-                                <input type="button" onclick="setAlarm(this)" id="alarmButton" value="Set Alarm"
+                                <input type="button" onClick="setAlarm(this)" id="alarmButton" value="Set Alarm"
                                     class="button">
                                 <p></p>
                                 <hr width="90%">
@@ -134,7 +134,7 @@
                                 <select name="alarmListbox" id="alarmListbox" multiple size="10">
                                 </select>
                                 <p></p>
-                                <input type="button" onclick="deleteAlarm(this)" id="alarmDeleteButton"
+                                <input type="button" onClick="deleteAlarm(this)" id="alarmDeleteButton"
                                     value="Delete Alarm" class="button">
                             </div>
                             <hr width="90%">
@@ -144,7 +144,7 @@
                                         <label id="alarmColorValue"></label>
                                     </p>
                                     <p class="switch">
-                                        <input type="color" onchange="updateColor(this)" id="color2" value="#FFFFFF">
+                                        <input type="color" onChange="updateColor(this)" id="color2" value="#FFFFFF">
                                     </p>
                                 </form>
                             </div>
@@ -156,22 +156,22 @@
             <div class="card">
                 <p class="card-title"> Calender </p>
                 <div class="switch">
-                    <input type="file" id="readfile" onchange="readFile(this)" style="display: none" accept=".ics"
+                    <input type="file" id="readfile" onChange="readFile(this)" style="display: none" accept=".ics"
                         multiple="multiple">
-                    <input type="button" value="Set Calender Data" onclick="document.getElementById('readfile').click()"
+                    <input type="button" value="Set Calender Data" onClick="document.getElementById('readfile').click()"
                         class="button">
                     <p></p>
-                    <input type="button" value="Delete Calender Data" onclick="deleteICS(this)" class="button">
+                    <input type="button" value="Delete Calender Data" onClick="deleteICS(this)" class="button">
                 </div>
                 <hr width="90%">
                 <p class="card-title"> Store & Load </p>
                 <div class="switch">
-                    <input type="button" onclick="updateButton(this)" id="button1" value="Load Default Configuration"
+                    <input type="button" onClick="updateButton(this)" id="button1" value="Load Default Configuration"
                         class="button">
                 </div>
                 <p></p>
                 <div class="switch">
-                    <input type="button" onclick="updateButton(this)" id="button2"
+                    <input type="button" onClick="updateButton(this)" id="button2"
                         value="Store As Default Configuration" class="button">
                 </div>
                 <p></p>
