@@ -1,26 +1,20 @@
-import React from "react";
 import './Alarm.css';
+
+import AlarmColor from "./AlarmColor";
 
 export default function Alarm() {
   return (
-    <app-box class="alarm">
+    <>
+    <app-box class="config">
       <h1>Alarm</h1>
-      <div>
-        <h3>Enable/Disable</h3>
-        <label class="toggleSwitch">
-          <input
-            type="checkbox"
-            onClick="updateToggleAlarm(this)"
-            id="toggleAlarm"
-            checked
-          />
-          <span class="toggle round" />
-        </label>
-      </div>
+      <AlarmColor />
+    </app-box>
+
+
+    <app-box class="alarm">
       <div id="alarmCard">
         <div class="switch">
           <div>
-            <hr width="90%" />
             <div>
               <h3>Alarm Event Configuration</h3>
             </div>
@@ -78,24 +72,12 @@ export default function Alarm() {
                 class="button"
               />
             </div>
-            <hr width="90%" />
-            <div>
-              <form id="colorCard2">
-                <h3>Alarm Color<label id="alarmColorValue" /></h3>
-                <p class="switch">
-                  <input
-                    type="color"
-                    // onChange="updateColor(this)"
-                    id="color2"
-                    value="#FFFFFF"
-                  />
-                </p>
-              </form>
-            </div>
+           
           </div>
         </div>
       </div>
       <p></p>
     </app-box>
+    </>
   );
 }

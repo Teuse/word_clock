@@ -14,7 +14,6 @@ export default function ColorConfig() {
           <input
             type="color"
             onChange={(event) => setClockColor(event.target.value)}
-            id="color1"
             value={clockColor}
           />
         </span>
@@ -26,7 +25,6 @@ export default function ColorConfig() {
           <input
             type="color"
             onChange={(event) => setTransitionColor(event.target.value)}
-            id="color1"
             value={transitionColor}
           />
         </span>
@@ -38,11 +36,9 @@ export default function ColorConfig() {
       <input
         type="range"
         onChange={(event) => setBrightnes(event.target.value)}
-        id="slider1"
         min="0"
         max="100"
         step="1"
-        // value={brightnes}
         class="slider"
       />
     </div>

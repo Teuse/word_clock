@@ -1,20 +1,20 @@
-import React from 'react';
+import React from "react";
 import "./Toggle.css";
 
-const Toggle = ({ isOn, onChangee }) => {
+const Toggle = ({ id, isOn, onChange }) => {
   return (
     <>
       <input
         checked={isOn}
-        onChange={onChangee}
+        onChange={onChange}
         class="toggle-checkbox"
-        id={`toggle-new`}
+        id={id}
         type="checkbox"
       />
       <label
         class="toggle-label"
-        htmlFor={`toggle-new`}
-        style={{ background: !isOn && '#757575' }}
+        htmlFor={id}
+        style={{ background: !isOn && "#757575" }}
       >
         <span class={`toggle-button`} />
       </label>

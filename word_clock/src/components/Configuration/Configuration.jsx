@@ -10,12 +10,10 @@ export default function Configuration() {
   return (
     <app-box class="config">
       <h1>Configuration</h1>
-
       <ColorConfig />
       <ModeConfig />
       <FunctionConfig />
       <MiscConfig />
-
     </app-box>
   );
 }

@@ -13,8 +13,9 @@ export default function MiscConfig() {
           Advanced Config
           <div class="box-value">
             <Toggle
+              id="advancedToggle"
               isOn={advancedConfig}
-              onChangee={() => setAdvancedConfig(!advancedConfig)}
+              onChange={() => setAdvancedConfig(!advancedConfig)}
             />
           </div>
         </div>
